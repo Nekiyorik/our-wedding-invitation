@@ -281,8 +281,8 @@
 
         .countdown-leaves-right {
             position: absolute;
-            right: -40px;
-            top: -20px;
+            right: 0px;
+            top: -60px;
             width: 100px;
             opacity: 0.6;
             transform: rotate(20deg);
@@ -549,7 +549,7 @@
             position: absolute;
             left: 0;
             bottom: 40px;
-            width: 200px;
+            width:100px;
             opacity: 0.6;
         }
 
@@ -561,7 +561,7 @@
             position: absolute;
             right: 0;
             top: 20px;
-            width: 180px;
+            width: 100px;
             opacity: 0.5;
         }
 
@@ -724,14 +724,84 @@
                 height: 50px;
                 font-size: 18px;
             }
-            .contact-fields {
-                flex-direction: column;
-            }
             .venue-photo {
                 height: 160px;
             }
         }
+        /* === FIX: containment для декоративных элементов === */
 
+        /* Родительские секции ограничивают вылеты */
+        .countdown-section,
+        .bottom-countdown {
+            position: relative;
+           overflow-x: hidden; /* фолбэк для старых браузеров */
+        }
+
+        /* Сами листья: не дают расширять контейнер */
+        .countdown-leaves-left,
+        .countdown-leaves-right,
+        .bottom-leaves-left,
+        .bottom-leaves-right {
+            pointer-events: none; /* не мешают кликам */
+            will-change: transform; /* оптимизация рендеринга */
+        }
+
+        /* Изображения внутри листьев: строго в рамках */
+        .countdown-leaves-left img,
+        .countdown-leaves-right img,
+        .bottom-leaves-left img,
+        .bottom-leaves-right img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* === Адаптив для мобильных (≤480px) === */
+        @media (max-width: 480px) {
+            .countdown-leaves-left {
+                left: 0;
+                bottom: -10px;
+                width: 80px;
+                transform: rotate(-5deg);
+            }
+
+            .countdown-leaves-right {
+                right: 0;
+                top: -30px;
+                width: 70px;
+                transform: rotate(10deg);
+            }
+
+            .bottom-leaves-left,
+            .bottom-leaves-right {
+                width: 70px;
+                opacity: 0.4;
+            }
+
+            .bottom-leaves-left {
+                left: 10px;
+                bottom: 20px;
+            }
+
+            .bottom-leaves-right {
+                right: 10px;
+                top: 10px;
+            }
+
+            /* Hero-листья: центрируем и уменьшаем */
+            .hero-leaves-top,
+            .hero-leaves-bottom {
+                width: 260px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        /* === Универсальная защита для всех секций === */
+        section {
+            position: relative;
+            overflow-x: hidden;
+        }
     </style>
 </head>
 <body>
@@ -765,9 +835,9 @@
             </div>
             <div class="venue-photo">
                 <img src="https://image.qwenlm.ai/public_source/20e1cfa9-c6f2-4f8b-8257-8a48ccd97f70/17460532e-0a43-4864-91bb-2aa5d6e2a66c.png" alt="Зал">
-                <button class="venue-map-btn" onclick="window.open('https://maps.google.com/?q=Санкт-Петербург,+Тохтолодское+озеро','_blank')">Посмотреть на карте</button>
             </div>
         </div>
+        <button class="venue-map-btn" onclick="window.open('https://yandex.ru/maps/-/CPsx4FzA','_blank')">Посмотреть на карте</button>
         <h2 class="venue-title">Место<br>торжества</h2>
         <p class="venue-address">Чита, пгт Новокручининский<br>ул. Энергетиков, 11А<br>Кафу "Рандеву"</p>
     </div>
@@ -996,10 +1066,10 @@
 <!-- BOTTOM COUNTDOWN -->
 <section class="bottom-countdown fade-in">
     <div class="bottom-leaves-left">
-        <img src="https://image.qwenlm.ai/public_source/20e1cfa9-c6f2-4f8b-8257-8a48ccd97f70/1f090bae0-00d9-42f2-a61d-9222b7a7a932.png" alt="Листья">
+        <img src="source/img/1ca41e050-ceb3-4428-a54e-2b64f6307bf5-Photoroom.png" alt="Листья">
     </div>
     <div class="bottom-leaves-right">
-        <img src="https://image.qwenlm.ai/public_source/20e1cfa9-c6f2-4f8b-8257-8a48ccd97f70/1ca41e050-ceb3-4428-a54e-2b64f6307bf5.png" alt="Листья">
+        <img src="source/img/13bc911c5-bee8-49a9-903f-eb48903f1e55-Photoroom.png" alt="Листья">
     </div>
     <h2 class="bottom-countdown-title">Увидимся с вами через</h2>
     <div class="countdown-units">
@@ -1065,9 +1135,6 @@
 
     </div>
 </footer>
-
-<!-- TOAST -->
-<div class="toast" id="toast">Анкета успешно отправлена! Спасибо!</div>
 
 <script>
     // Countdown Timer
@@ -1149,25 +1216,6 @@
         });
     });
 
-
-    // Form Submit
-    function handleSubmit(e) {
-        e.preventDefault();
-        const toast = document.getElementById('toast');
-        toast.textContent = 'Анкета успешно отправлена! Спасибо!';
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 3000);
-        e.target.reset();
-    }
-
-    function handleContactSubmit(e) {
-        e.preventDefault();
-        const toast = document.getElementById('toast');
-        toast.textContent = 'Заявка отправлена! Мы свяжемся с вами.';
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 3000);
-        e.target.reset();
-    }
 
     // FAQ Toggle
     function toggleFaq(item) {
