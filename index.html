@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Никита & Анастасия — Свадьба 26.06.2026</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: #f9f8f5;
+            color: #4a4a4a;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+            position: relative;
+        }
+
+        .hero-leaves-top {
+            position: relative;
+            width: 320px;
+            margin: 0 auto 20px;
+        }
+
+        .hero-leaves-top img {
+            width: 100%;
+            display: block;
+        }
+
+        .couple-names {
+            position: relative;
+            z-index: 2;
+            margin: -40px 0 10px;
+        }
+
+        .couple-names h1 {
+            font-size: 42px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: #6b7c5e;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .couple-names .amp {
+            font-style: italic;
+            color: #a8b896;
+            font-size: 36px;
+            display: block;
+            margin: -5px 0;
+        }
+
+        .wedding-date-hero {
+            font-size: 14px;
+            color: #8a9a7a;
+            letter-spacing: 2px;
+            margin-top: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+        }
+
+        .hero-leaves-bottom {
+            position: relative;
+            width: 300px;
+            margin: 10px auto 0;
+        }
+
+        .hero-leaves-bottom img {
+            width: 100%;
+            display: block;
+        }
+
+        /* WELCOME TEXT */
+        .welcome {
+            text-align: center;
+            padding: 40px 30px;
+        }
+
+        .welcome p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #5a5a5a;
+            margin-bottom: 15px;
+        }
+
+        .welcome .highlight {
+            font-size: 18px;
+            font-style: italic;
+            color: #6b7c5e;
+        }
+
+        /* VENUE SECTION */
+        .venue {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .venue-photos {
+            display: flex;
+            gap: 4px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .venue-photo {
+            width: 48%;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 4px;
+        }
+
+        .venue-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .venue-map-btn {
+            display: inline-block;
+            background: #6b7c5e;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-family: 'Montserrat', sans-serif;
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: relative;
+            bottom: 40px;
+            left: -10px;
+            cursor: pointer;
+            border: none;
+            transition: background 0.3s;
+        }
+
+        .venue-map-btn:hover {
+            background: #5a6b4e;
+        }
+
+        .venue-title {
+            font-size: 22px;
+            color: #6b7c5e;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .venue-address {
+            font-size: 15px;
+            color: #6a6a6a;
+            line-height: 1.7;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+        }
+
+        /* PROGRAM */
+        .program {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .program-card {
+            background: #6b7c5e;
+            border-radius: 12px;
+            padding: 40px 30px;
+            color: #fff;
+            position: relative;
+            max-width: 400px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(107,124,94,0.3);
+        }
+
+        .program-card::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: rgba(107,124,94,0.15);
+            border-radius: 16px;
+            z-index: -1;
+        }
+
+        .program-date {
+            font-size: 13px;
+            letter-spacing: 2px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .program-title {
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .program-items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            position: relative;
+        }
+
+        .program-item {
+            position: relative;
+        }
+
+        .program-time {
+            font-size: 28px;
+            font-weight: 300;
+            margin-bottom: 5px;
+        }
+
+        .program-desc {
+            font-size: 13px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+
+        .program-line {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            height: 1px;
+            border-top: 1px dashed rgba(255,255,255,0.3);
+        }
+
+        /* COUNTDOWN */
+        .countdown-section {
+            padding: 50px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .countdown-frame {
+            background: #e8ebe5;
+            border-radius: 16px;
+            padding: 35px 25px;
+            max-width: 420px;
+            margin: 0 auto;
+            position: relative;
+            border: 1px solid #d0d5cb;
+        }
+
+        .countdown-leaves-left {
+            position: absolute;
+            left: -60px;
+            bottom: -30px;
+            width: 120px;
+            opacity: 0.7;
+            transform: rotate(-15deg);
+        }
+
+        .countdown-leaves-left img {
+            width: 100%;
+        }
+
+        .countdown-leaves-right {
+            position: absolute;
+            right: -40px;
+            top: -20px;
+            width: 100px;
+            opacity: 0.6;
+            transform: rotate(20deg);
+        }
+
+        .countdown-leaves-right img {
+            width: 100%;
+        }
+
+        .countdown-title {
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #6b7c5e;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+
+        .countdown-units {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .countdown-unit {
+            text-align: center;
+        }
+
+        .countdown-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid #6b7c5e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: 300;
+            color: #6b7c5e;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .countdown-label {
+            font-size: 10px;
+            color: #8a9a7a;
+            margin-top: 5px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* DRESS CODE */
+        .dresscode {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .dresscode-title {
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #6b7c5e;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .dresscode-intro {
+            font-size: 15px;
+            color: #6a6a6a;
+            max-width: 400px;
+            margin: 0 auto 30px;
+            line-height: 1.7;
+        }
+
+        .dresscode-divider {
+            font-size: 24px;
+            color: #a8b896;
+            margin: 20px 0;
+        }
+
+        .dresscode-subtitle {
+            font-size: 16px;
+            color: #5a5a5a;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .dresscode-text {
+            font-size: 14px;
+            color: #6a6a6a;
+            max-width: 380px;
+            margin: 0 auto 20px;
+            line-height: 1.6;
+        }
+
+        .color-palette {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .color-swatch {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #e0e0e0;
+        }
+
+        .color-swatch:nth-child(1) { background: #f5f0e8; }
+        .color-swatch:nth-child(2) { background: #c8bfb0; }
+        .color-swatch:nth-child(3) { background: #9b917e; }
+        .color-swatch:nth-child(4) { background: #6b7c5e; }
+        .color-swatch:nth-child(5) { background: #4a5a3e; }
+
+        .dresscode-photos {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .dresscode-photo {
+            width: 22%;
+            height: 160px;
+            overflow: hidden;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transform: rotate(var(--rotation, 0deg));
+        }
+
+        .dresscode-photo:nth-child(1) { --rotation: -2deg; }
+        .dresscode-photo:nth-child(2) { --rotation: 1deg; }
+        .dresscode-photo:nth-child(3) { --rotation: -1deg; }
+        .dresscode-photo:nth-child(4) { --rotation: 2deg; }
+
+        .dresscode-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .mens-photos {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .mens-photo {
+            width: 22%;
+            height: 140px;
+            overflow: hidden;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transform: rotate(var(--rotation, 0deg));
+        }
+
+        .mens-photo:nth-child(1) { --rotation: 1deg; }
+        .mens-photo:nth-child(2) { --rotation: -2deg; }
+        .mens-photo:nth-child(3) { --rotation: 2deg; }
+        .mens-photo:nth-child(4) { --rotation: -1deg; }
+
+        .mens-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* FORM */
+        .form-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .form-title {
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #6b7c5e;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        .form-subtitle {
+            font-size: 15px;
+            color: #6a6a6a;
+            max-width: 380px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        .form-notice {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 25px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+        }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 25px;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 14px;
+            color: #4a4a4a;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px 0;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            background: transparent;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 16px;
+            color: #4a4a4a;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-input:focus {
+            border-bottom-color: #6b7c5e;
+        }
+
+        .radio-group, .checkbox-group {
+            margin-top: 5px;
+        }
+
+        .radio-item, .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+            cursor: pointer;
+        }
+
+        .radio-item input, .checkbox-item input {
+            accent-color: #6b7c5e;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        .radio-item label, .checkbox-item label {
+            font-size: 14px;
+            color: #5a5a5a;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+        }
+
+        .submit-btn {
+            background: transparent;
+            border: 1px solid #6b7c5e;
+            color: #6b7c5e;
+            padding: 12px 40px;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background: #6b7c5e;
+            color: #fff;
+        }
+
+        /* BOTTOM COUNTDOWN */
+        .bottom-countdown {
+            padding: 60px 0 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .bottom-leaves-left {
+            position: absolute;
+            left: 0;
+            bottom: 40px;
+            width: 200px;
+            opacity: 0.6;
+        }
+
+        .bottom-leaves-left img {
+            width: 100%;
+        }
+
+        .bottom-leaves-right {
+            position: absolute;
+            right: 0;
+            top: 20px;
+            width: 180px;
+            opacity: 0.5;
+        }
+
+        .bottom-leaves-right img {
+            width: 100%;
+        }
+
+        .bottom-countdown-title {
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #6b7c5e;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+
+        .bottom-countdown .countdown-units {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .bottom-couple-names {
+            margin-top: 40px;
+            font-size: 28px;
+            color: #6b7c5e;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .bottom-date {
+            font-size: 14px;
+            color: #8a9a7a;
+            margin-top: 5px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+        }
+
+        /* FAQ */
+        .faq-section {
+            padding: 50px 0;
+            background: #fff;
+        }
+
+        .faq-title {
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #6b7c5e;
+            margin-bottom: 25px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-size: 15px;
+            color: #4a4a4a;
+            font-weight: 500;
+        }
+
+        .faq-arrow {
+            font-size: 18px;
+            color: #6b7c5e;
+            transition: transform 0.3s;
+            flex-shrink: 0;
+            margin-left: 10px;
+        }
+
+        .faq-item.active .faq-arrow {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s;
+            font-size: 14px;
+            color: #6a6a6a;
+            line-height: 1.7;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-top: 12px;
+        }
+
+        /* CONTACT FORM */
+        .contact-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .contact-title {
+            font-size: 20px;
+            color: #4a4a4a;
+            margin-bottom: 30px;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        .contact-fields {
+            display: flex;
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .contact-field {
+            flex: 1;
+            min-width: 140px;
+            text-align: left;
+        }
+
+        .contact-field-label {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 5px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+        }
+
+        .contact-input, .contact-select {
+            width: 100%;
+            padding: 8px 0;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            background: transparent;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 15px;
+            color: #4a4a4a;
+            outline: none;
+        }
+
+        .contact-send-btn {
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 12px 35px;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact-send-btn:hover {
+            background: #555;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #2a2a2a;
+            color: #aaa;
+            padding: 40px 20px 20px;
+            text-align: center;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            display: block;
+            color: #aaa;
+            text-decoration: none;
+            font-size: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            margin-bottom: 5px;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .footer-hours {
+            font-size: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            color: #aaa;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-social-icon {
+            width: 36px;
+            height: 36px;
+            border: 1px solid #666;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .footer-social-icon:hover {
+            border-color: #fff;
+            color: #fff;
+        }
+
+        .footer-brand {
+            font-size: 32px;
+            color: #444;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            letter-spacing: 3px;
+            margin: 20px 0;
+            text-transform: uppercase;
+        }
+
+        .footer-copy {
+            font-size: 11px;
+            color: #666;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            margin-top: 15px;
+        }
+
+        /* SVG Icons */
+        .icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .couple-names h1 {
+                font-size: 32px;
+            }
+            .program-items {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            .dresscode-photo, .mens-photo {
+                width: 45%;
+                height: 130px;
+            }
+            .countdown-circle {
+                width: 50px;
+                height: 50px;
+                font-size: 18px;
+            }
+            .contact-fields {
+                flex-direction: column;
+            }
+            .venue-photo {
+                height: 160px;
+            }
+        }
+
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #6b7c5e;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            z-index: 1000;
+            transition: transform 0.4s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-leaves-top">
+        <img src="https://image.qwenlm.ai/public_source/20e1cfa9-c6f2-4f8b-8257-8a48ccd97f70/139d1d41e-bf35-46fc-810a-36a76189b7b9.png" alt="Листья">
+    </div>
+    <div class="couple-names">
+        <h1>Никита<br><span class="amp">&amp;</span>Анастасия</h1>
+    </div>
+    <div class="wedding-date-hero">26.06.2026</div>
+    <div class="hero-leaves-bottom">
+        <img src="https://image.qwenlm.ai/public_source/20e1cfa9-c6f2-4f8b-8257-8a48ccd97f70/16b55d8c9-cd9f-4d91-a749-e314ff64f468.png" alt="Листья">
+    </div>
+</section>
+
+<!-- WELCOME -->
+<section class="welcome fade-in">
+    <p>Мы будем рады разделить с Вами радость неповторимого для нас дня —<br>дня нашей свадьбы!</p>
+    <p class="highlight">Дорогие друзья и родные,<br>мы приглашаем вас на нашу свадьбу!</p>
+</section>
+
+<!-- VENUE -->
+<section class="venue fade-in">
+    <div class="container">
+        <div class="venue-photos">
+            <div class="venue-photo">
+                <img src="https://image.qwenlm.ai/public_source/20e1cfa9-c6f2-4f8b-8257-8a48ccd97f70/16078ec43-3217-4ecf-ba95-d787f389124a.png" alt="Банкет">
+            </div>
+            <div class="venue-photo">
+                <img src="https://image.qwenlm.ai/public_source/20e1cfa9-c6f2-4f8b-8257-8a48ccd97f70/17460532e-0a43-4864-91bb-2aa5d6e2a66c.png" alt="Зал">
+                <button class="venue-map-btn" onclick="window.open('https://maps.google.com/?q=Санкт-Петербург,+Тохтолодское+озеро','_blank')">Посмотреть на карте</button>
+            </div>
+        </div>
+        <h2 class="venue-title">Место<br>торжества</h2>
+        <p class="venue-address">Чита, пгт Новокручининский<br>ул. Энергетиков, 11А<br>Кафу "Рандеву"</p>
+    </div>
+</section>
+
+<!-- PROGRAM -->
+<section class="program fade-in">
+    <div class="container">
+        <div class="program-card">
+            <div class="program-date">26.06.2026</div>
+            <h2 class="program-title">Программа<br>торжества</h2>
+            <div class="program-items">
+                <div class="program-item">
+                    <div class="program-time">14:00</div>
+                    <div class="program-desc">Сбор гостей,<br>фуршет</div>
+                </div>
+                <div class="program-item">
+                    <div class="program-time">15:00</div>
+                    <div class="program-desc">Начало<br>официальной части</div>
+                </div>
+                <div class="program-item">
+                    <div class="program-time">17:00</div>
+                    <div class="program-desc">Праздничный<br>банкет</div>
+                </div>
+                <div class="program-item">
+                    <div class="program-time">22:00</div>
+                    <div class="program-desc">After party</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="countdown-section fade-in">
+    <div class="container">
+        <div class="countdown-frame">
+            <div class="countdown-leaves-left">
+                <img src="https://image.qwenlm.ai/public_source/20e1cfa9-c6f2-4f8b-8257-8a48ccd97f70/1ca41e050-ceb3-4428-a54e-2b64f6307bf5.png" alt="Листья">
+            </div>
+            <div class="countdown-leaves-right">
+                <img src="https://image.qwenlm.ai/public_source/20e1cfa9-c6f2-4f8b-8257-8a48ccd97f70/13bc911c5-bee8-49a9-903f-eb48903f1e55.png" alt="Листья">
+            </div>
+            <h2 class="countdown-title">До торжества<br>осталось</h2>
+            <div class="countdown-units">
+                <div class="countdown-unit">
+                    <div class="countdown-circle" id="cd-days">144</div>
+                    <div class="countdown-label">дней</div>
+                </div>
+                <div class="countdown-unit">
+                    <div class="countdown-circle" id="cd-hours">0</div>
+                    <div class="countdown-label">часов</div>
+                </div>
+                <div class="countdown-unit">
+                    <div class="countdown-circle" id="cd-minutes">39</div>
+                    <div class="countdown-label">минут</div>
+                </div>
+                <div class="countdown-unit">
+                    <div class="countdown-circle" id="cd-seconds">20</div>
+                    <div class="countdown-label">секунд</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DRESS CODE -->
+<section class="dresscode fade-in">
+    <div class="container">
+        <h2 class="dresscode-title">Дресс-код</h2>
+        <p class="dresscode-intro">Мы очень ждём и с удовольствием готовимся к нашему незабываемому дню! Поддержите нас вашими улыбками и объятиями, а также красивыми нарядами.</p>
+        <div class="dresscode-divider">~</div>
+        <h3 class="dresscode-subtitle">Для дам просим выбрать вечерние и коктейльные платья в палитре торжества и избегать белого цвета.</h3>
+        <div class="color-palette">
+            <div class="color-swatch"></div>
+            <div class="color-swatch"></div>
+            <div class="color-swatch"></div>
+            <div class="color-swatch"></div>
+            <div class="color-swatch"></div>
+        </div>
+        <div class="dresscode-photos">
+            <div class="dresscode-photo">
+                <img src="https://image.qwenlm.ai/public_source/20e1cfa9-c6f2-4f8b-8257-8a48ccd97f70/133fdf4f1-5bef-4dda-9777-246bd5fa72fc.png" alt="Платье">
+            </div>
+            <div class="dresscode-photo">
+                <img src="https://image.qwenlm.ai/public_source/20e1cfa9-c6f2-4f8b-8257-8a48ccd97f70/10378483e-e516-4bbc-8ab3-bf8ecd42cea6.png" alt="Платья">
+            </div>
+            <div class="dresscode-photo">
+                <img src="https://image.qwenlm.ai/public_source/20e1cfa9-c6f2-4f8b-8257-8a48ccd97f70/12d1bad08-76e1-4bb4-a6f4-81e9f079ea30.png" alt="Платье">
+            </div>
+            <div class="dresscode-photo">
+                <img src="https://image.qwenlm.ai/public_source/20e1cfa9-c6f2-4f8b-8257-8a48ccd97f70/1819659a4-76c2-4249-af3d-9997ebf14ebf.png" alt="Платье">
+            </div>
+        </div>
+        <h3 class="dresscode-subtitle" style="margin-top: 30px;">Для джентльменов уместным будет классический костюм со светлой рубашкой.</h3>
+        <div class="mens-photos">
+            <div class="mens-photo">
+                <img src="https://image.qwenlm.ai/public_source/20e1cfa9-c6f2-4f8b-8257-8a48ccd97f70/1a2c1bd4e-b3b5-4282-b1d5-5351c7ed8878.png" alt="Костюм">
+            </div>
+            <div class="mens-photo">
+                <img src="https://image.qwenlm.ai/public_source/20e1cfa9-c6f2-4f8b-8257-8a48ccd97f70/15d550f0d-9015-4508-9233-0a4559ffb8d8.png" alt="Костюм">
+            </div>
+            <div class="mens-photo">
+                <img src="https://image.qwenlm.ai/public_source/20e1cfa9-c6f2-4f8b-8257-8a48ccd97f70/1bfa79528-b0ab-4414-9d7b-566325d5c54d.png" alt="Костюм">
+            </div>
+            <div class="mens-photo">
+                <img src="https://image.qwenlm.ai/public_source/20e1cfa9-c6f2-4f8b-8257-8a48ccd97f70/1027dbe65-1c34-4c10-bae0-49798e394f8e.png" alt="Костюм">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section fade-in">
+    <div class="container">
+        <h2 class="form-title">Анкета гостя</h2>
+        <p class="form-subtitle">Будем очень признательны, если Вы сообщите нам о своём решении до 20.08.2026.</p>
+        <p class="form-notice">Важно! Анкета заполняется индивидуально для каждого гостя.</p>
+
+        <form id="rsvpForm" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+                <label class="form-label">Ваше Имя и Фамилия:</label>
+                <input type="text" class="form-input" placeholder="Иванов Иван" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Будут ли с Вами дети?</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="children" id="ch-yes" value="yes">
+                        <label for="ch-yes">Да</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="children" id="ch-no" value="no">
+                        <label for="ch-no">Нет</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Подтвердите свое присутствие:</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="attendance" id="att-yes" value="yes">
+                        <label for="att-yes">Я с удовольствием приду</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="attendance" id="att-no" value="no">
+                        <label for="att-no">К сожалению, не смогу</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Предпочтения по меню</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="menu" id="menu-meat" value="meat">
+                        <label for="menu-meat">Предпочтительное мясо</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="menu" id="menu-fish" value="fish">
+                        <label for="menu-fish">Предпочтительное рыба</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="menu" id="menu-vegan" value="vegan">
+                        <label for="menu-vegan">Веган</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Есть ли у Вас пищевые аллергии?</label>
+                <p style="font-size:12px;color:#999;margin-bottom:8px;font-family:'Montserrat',sans-serif;font-weight:300;">Если да, то укажите какие</p>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="allergy" id="alg-no" value="no">
+                        <label for="alg-no">Нет</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="allergy" id="alg-yes" value="yes">
+                        <label for="alg-yes">Да</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Какие напитки Вы предпочитаете?</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="drink-juice" value="juice">
+                        <label for="drink-juice">Сок</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="drink-soda" value="soda">
+                        <label for="drink-soda">Газировка</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="drink-champagne" value="champagne">
+                        <label for="drink-champagne">Шампанское</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="drink-wine-w" value="wine-white">
+                        <label for="drink-wine-w">Белое вино</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="drink-wine-r" value="wine-red">
+                        <label for="drink-wine-r">Красное вино</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="drink-whiskey" value="whiskey">
+                        <label for="drink-whiskey">Виски</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="drink-cognac" value="cognac">
+                        <label for="drink-cognac">Коньяк</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="drink-beer" value="beer">
+                        <label for="drink-beer">Пиво</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="drink-vodka" value="vodka">
+                        <label for="drink-vodka">Водка</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="drink-none" value="none">
+                        <label for="drink-none">Не буду пить алкоголь</label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Отправить</button>
+        </form>
+    </div>
+</section>
+
+<!-- BOTTOM COUNTDOWN -->
+<section class="bottom-countdown fade-in">
+    <div class="bottom-leaves-left">
+        <img src="https://image.qwenlm.ai/public_source/20e1cfa9-c6f2-4f8b-8257-8a48ccd97f70/1f090bae0-00d9-42f2-a61d-9222b7a7a932.png" alt="Листья">
+    </div>
+    <div class="bottom-leaves-right">
+        <img src="https://image.qwenlm.ai/public_source/20e1cfa9-c6f2-4f8b-8257-8a48ccd97f70/1ca41e050-ceb3-4428-a54e-2b64f6307bf5.png" alt="Листья">
+    </div>
+    <h2 class="bottom-countdown-title">Увидимся с вами через</h2>
+    <div class="countdown-units">
+        <div class="countdown-unit">
+            <div class="countdown-circle" id="cd2-days">144</div>
+            <div class="countdown-label">дней</div>
+        </div>
+        <div class="countdown-unit">
+            <div class="countdown-circle" id="cd2-hours">0</div>
+            <div class="countdown-label">часов</div>
+        </div>
+        <div class="countdown-unit">
+            <div class="countdown-circle" id="cd2-minutes">39</div>
+            <div class="countdown-label">минут</div>
+        </div>
+        <div class="countdwn-unit">
+            <div class="countdown-circle" id="cd2-seconds">17</div>
+            <div class="countdown-label">секунд</div>
+        </div>
+    </div>
+    <div class="bottom-couple-names">Никита &amp; Анастасия</div>
+    <div class="bottom-date">26.06.2026</div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section fade-in">
+    <div class="container">
+        <h2 class="faq-title">FAQ</h2>
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+                <span>Какие изменения в макете включены в стоимость?</span>
+                <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-answer">Все изменения, описанные в ТЗ, включены в стоимость. Дополнительные правки обсуждаются индивидуально.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+                <span>Дополнительные опции и блоки</span>
+                <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-answer">Вы можете добавить дополнительные блоки: карта проезда, фотоальбом, музыкальное сопровождение и др. Стоимость рассчитывается индивидуально.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+                <span>Сроки создания приглашения?</span>
+                <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-answer">Стандартный срок создания приглашения на основе авторского шаблона занимает 1-3 дня с момента получения всех необходимой информации и работы. Сроки создания индивидуального приглашения составляют около 10-14 дней. Обращаю ваше внимание, что сроки могут быть увеличены в зависимости от загруженности, я всегда вам пиши, сколько именно потребуется времени на работу.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+                <span>Как долго будет работать приглашение?</span>
+                <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-answer">Приглашение будет работать бессрочно. Вы можете получить доступ к нему в любое время.</div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-top">
+
+    </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast">Анкета успешно отправлена! Спасибо!</div>
+
+<script>
+    // Countdown Timer
+    const weddingDate = new Date('2026-06-26T14:00:00+03:00');
+
+    function updateCountdown() {
+        const now = new Date();
+        const diff = weddingDate - now;
+
+        if (diff <= 0) {
+            document.getElementById('cd-days').textContent = '0';
+            document.getElementById('cd-hours').textContent = '0';
+            document.getElementById('cd-minutes').textContent = '0';
+            document.getElementById('cd-seconds').textContent = '0';
+            document.getElementById('cd2-days').textContent = '0';
+            document.getElementById('cd2-hours').textContent = '0';
+            document.getElementById('cd2-minutes').textContent = '0';
+            document.getElementById('cd2-seconds').textContent = '0';
+            return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById('cd-days').textContent = days;
+        document.getElementById('cd-hours').textContent = hours;
+        document.getElementById('cd-minutes').textContent = minutes;
+        document.getElementById('cd-seconds').textContent = seconds;
+        document.getElementById('cd2-days').textContent = days;
+        document.getElementById('cd2-hours').textContent = hours;
+        document.getElementById('cd2-minutes').textContent = minutes;
+        document.getElementById('cd2-seconds').textContent = seconds;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // Form Submit
+    function handleSubmit(e) {
+        e.preventDefault();
+        const toast = document.getElementById('toast');
+        toast.textContent = 'Анкета успешно отправлена! Спасибо!';
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 3000);
+        e.target.reset();
+    }
+
+    function handleContactSubmit(e) {
+        e.preventDefault();
+        const toast = document.getElementById('toast');
+        toast.textContent = 'Заявка отправлена! Мы свяжемся с вами.';
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 3000);
+        e.target.reset();
+    }
+
+    // FAQ Toggle
+    function toggleFaq(item) {
+        item.classList.toggle('active');
+    }
+
+    // Scroll Animations
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.15 });
+
+    fadeEls.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
+
