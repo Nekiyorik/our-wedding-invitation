@@ -29,8 +29,29 @@
             text-align: center;
             padding: 60px 20px 40px;
             position: relative;
-        }
 
+            background-image: url('source/img/photo_2026-05-20_13-53-56.jpg'); /* замените на путь к фото */
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* эффект параллакса */
+            min-height: 100vh; /* на всю высоту экрана */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Затемнение фона для читаемости текста */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(55, 54, 51, 0.78); /* 40% затемнение */
+            z-index: 0;
+        }
         .hero-leaves-top {
             position: relative;
             width: 320px;
@@ -67,7 +88,7 @@
 
         .wedding-date-hero {
             font-size: 14px;
-            color: #8a9a7a;
+            color: #ffffff;
             letter-spacing: 2px;
             margin-top: 8px;
             font-family: 'Montserrat', sans-serif;
@@ -150,8 +171,8 @@
             transition: background 0.3s;
         }
 
-        .venue-map-btn:hover {
-            background: #5a6b4e;
+        .venue-map-btn:hover .submit-btn:hover {
+            background: #748966;
         }
 
         .venue-title {
@@ -538,7 +559,22 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 300;
         }
-
+        .submit-btn{
+            display: inline-block;
+            background: #6b7c5e;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-family: 'Montserrat', sans-serif;
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: relative;
+            cursor: pointer;
+            border: none;
+            transition: background 0.3s;
+        }
         /* BOTTOM COUNTDOWN */
         .bottom-countdown {
             padding: 60px 0 40px;
@@ -945,7 +981,10 @@
         <h2 class="form-title">Анкета гостя</h2>
         <p class="form-subtitle">Будем очень признательны, если Вы сообщите нам о своём решении до 15.06.2026.</p>
         <p class="form-notice">Важно! Анкета заполняется индивидуально для каждого гостя.</p>
-        <a>ссылка на форму в гугл</a>
+        <a class="submit-btn" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfDyaTPwKE0zlUQWDHB8A3KeR6aw8FdD45Ai_erBncs37ypbw/viewform?usp=dialog">ссылка на форму в гугл</a>
+
+
+
    <!--     <form id="rsvpForm" onsubmit="handleSubmit(event)">
             <div class="form-group">
                 <label class="form-label">Ваше Имя и Фамилия:</label>
