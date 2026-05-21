@@ -77,43 +77,6 @@
 }
 });
 
-    const video = document.getElementById('wedding-video');
-    const playBtn = document.querySelector('.video-play-btn');
-    const playIcon = playBtn.querySelector('.play-icon');
-    const pauseIcon = playBtn.querySelector('.pause-icon');
-
-    if (!video || !playBtn) return;
-
-    // Обновление иконки при изменении состояния
-    function updateButton() {
-    if (video.paused) {
-    playIcon.style.display = 'inline';
-    pauseIcon.style.display = 'none';
-} else {
-    playIcon.style.display = 'none';
-    pauseIcon.style.display = 'inline';
-}
-}
-
-    // Обработчик клика по кнопке
-    playBtn.addEventListener('click', () => {
-    if (video.paused) {
-    video.play();
-} else {
-    video.pause();
-}
-    updateButton();
-});
-
-    // Синхронизация кнопки с внешними событиями (например, если пользователь нажал пробел)
-    video.addEventListener('play', updateButton);
-    video.addEventListener('pause', updateButton);
-
-    // Инициализация: убедимся, что видео запущено (на случай, если autoplay не сработал)
-    video.play().catch(() => {
-    console.log('Autoplay prevented. User interaction needed.');
-    updateButton();
-});
 });
 
 
